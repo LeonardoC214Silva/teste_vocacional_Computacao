@@ -25,6 +25,15 @@
   margin-top: 10px; /* Espaçamento superior */
   margin: 0 auto;
   display: block;
+  align-self: center;
+}
+.Containeir {
+  display: inline-block;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+  margin-top: 10px;
 }
 .App-header {
   background-color: #1f2126;
@@ -57,11 +66,12 @@
 .checkbox-group {
   margin-bottom: 30px; /* Adapte o espaçamento inferior conforme necessário */
   margin-left: 30%; /* Adapte o espaçamento inferior conforme necessário */
-  margin-right: 20%; /* Adapte o espaçamento inferior conforme necessário */
+  margin-right: 30%; /* Adapte o espaçamento inferior conforme necessário */
+   /* Adapte o espaçamento inferior conforme necessário */
 
-  display: inline-block; /* Permite que os itens dentro do grupo se alinhem horizontalmente */
-
-  align-items: self-start;
+  display: flex; /* Permite que os itens dentro do grupo se alinhem horizontalmente */
+  flex-direction: column;
+  align-items: flex-start;
 }
 .checkbox-group label {
   margin-left: 15px; /* Adapte o espaçamento direito conforme necessário */

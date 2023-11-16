@@ -112,7 +112,7 @@ const Questionnaire2 = ({onProfessionSelect}) => {
         const pageQuestions = Object.keys(questions).slice(currentPage * 3, currentPage * 3 + 3);
 
         return (
-            <div>
+            <div >
                 <p className="Title2">Escolha as opções que mais te representa</p>
                 <div className="checkbox-group">
                     {pageQuestions.map((question, index) => (
@@ -149,7 +149,7 @@ const Questionnaire2 = ({onProfessionSelect}) => {
 
         return <div>{renderResults()}</div>;
     } else {
-        return <div>{renderOptions()}</div>;
+        return <div className="Containeir">{renderOptions()}</div>;
     }
 
 };
