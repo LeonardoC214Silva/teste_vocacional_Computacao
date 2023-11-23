@@ -23,24 +23,19 @@
   border: none; /* Remove a borda padrão do botão */
   border-radius: 5px; /* Borda arredondada */
   margin-top: 10px; /* Espaçamento superior */
-  margin: 0 auto;
-  display: block;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
   align-self: center;
 }
-.Containeir {
-  display: inline-block;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
 
-  margin-top: 10px;
-}
+
 .App-header {
-  background-color: #1f2126;
+  background-color: #40404f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;

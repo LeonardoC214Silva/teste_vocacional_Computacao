@@ -12,7 +12,7 @@ function App() {
 
     <div className="App">
       <header className="App-header">
-          <p className="Title1">Teste vocacional de informatica</p>
+
           <Questionnaire2 onProfessionSelect={handleProfessionSelection} />
 
 
