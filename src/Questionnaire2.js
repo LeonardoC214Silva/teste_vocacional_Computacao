@@ -263,39 +263,49 @@ const Questionnaire2 = ({onProfessionSelect}) => {
         return (
             <div className="mt-5">
 
-                <div className="col-md-12 text-center">
-                    <h1 className="form-label fs-1 mb-lg-5">Teste vocacional de informatica</h1>
+                <div className="text-center">
+                    <h1 className="form-label fs-1 mb-lg-5">Teste vocacional de informática</h1>
                 </div>
 
 
-                <div className="col-md-12 text-center">
+                <div className="text-center">
                     <h2 className="form-label text-info mb-5">Escolha as opções que mais te representa</h2>
                 </div>
-                <div className="container-md ms-5 ps-5">
 
-                    {pageQuestions.map((question, index) => (
-                        <div className="row" key={index}>
-                            <div className="col-md-12">
-                                <div className="form-check mb-4 ms-4">
-                                    <input
-                                        className="form-check-input"
-                                        type="checkbox"
-                                        checked={!!selectedQuestions[question]}
-                                        onChange={() => handleQuestionSelect(question)}
-                                    />
-                                    <label className="form-check-label ms-2">
-                                        {question}
-                                    </label>
+                    <div className="row">
+                        <div className="col-md-2"></div>
+                        <div className="container-md ms-5 ps-5 col-md-8">
+
+                            {pageQuestions.map((question, index) => (
+                                <div className="row" key={index}>
+                                    <div className="col-md-12">
+                                        <div className="form-check mb-4 ms-4">
+                                            <input
+                                                className="form-check-input"
+                                                type="checkbox"
+                                                checked={!!selectedQuestions[question]}
+                                                onChange={() => handleQuestionSelect(question)}
+                                            />
+                                            <label className="form-check-label ms-2">
+                                                {question}
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
+
                         </div>
-                    ))}
-                    <div className="row ms-5 ps-5">
-                        <div className=" mt-4">
-                            <button className="btn btn-secondary me-2" onClick={returnForm}>Voltar Página</button>
-                            <button className="btn btn-primary" onClick={submitForm}>Próxima Página</button>
-                        </div>
+                        <div className="col-md-2"></div>
                     </div>
+
+
+
+                <div className="mt-2 text-center">
+                    <h3 className = ""> {currentPage+1}/{MaxPages}</h3>
+                    <button className="btn btn-secondary me-2" onClick={returnForm}>Voltar Página</button>
+                    <button className="btn btn-primary" onClick={submitForm}>Próxima Página</button>
+                </div>
+                <div className="fixed-bottom text-center"> <h6>Feito por Leonardo C. da Silva e Luís Eduardo Souza Vasconcelos</h6>
                 </div>
             </div>
 
@@ -305,16 +315,24 @@ const Questionnaire2 = ({onProfessionSelect}) => {
 
     const renderResults = () => {
         if(selectedProfession===""){
-           setSelectedProfession("desempregado")
-        }
-        return (
-            <div className="container-md text-center align-content-md-center flex-column align-items-center pt-5" >
-                <h2 className="text-center"> Resultados:</h2>
+            return (
+                <div className="container-md text-center align-content-md-center flex-column align-items-center pt-5">
+                    <h2 className="text-center"> Resultado:</h2>
 
-                <p>Você é adequado para a profissão de {selectedProfession}!</p>
-                <button className="button-style" onClick={goToFirstPage}>Tentar novamente</button>
-            </div>
-        );
+                    <p>Respostas insuficientes para obter um resultado válido.</p>
+                    <button className="button-style" onClick={goToFirstPage}>Tentar novamente</button>
+                </div>
+            );
+        }else {
+            return (
+                <div className="container-md text-center align-content-md-center flex-column align-items-center pt-5">
+                    <h2 className="text-center"> Resultado:</h2>
+
+                    <p>Você é adequado para a profissão de {selectedProfession}!</p>
+                    <button className="button-style" onClick={goToFirstPage}>Tentar novamente</button>
+                </div>
+            );
+        }
     };
     if (currentPage >= MaxPages) {
 
