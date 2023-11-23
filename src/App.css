@@ -1,0 +1,85 @@
+.App {
+  text-align: match-parent;
+
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.button-style {
+  background-color: #4caf50; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 5px; /* Borda arredondada */
+  margin-top: 10px; /* Espaçamento superior */
+  margin-left: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: center;
+}
+
+
+.App-header {
+  background-color: #40404f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.Title1 {
+  font-size: 1.8em;
+  text-align: center;
+  color: #1770d3;
+}
+.Title2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #61abfb;
+}
+.Title3 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #61dafb;
+}
+.App-link {
+  color: #61dafb;
+}
+.checkbox-group {
+  margin-bottom: 30px; /* Adapte o espaçamento inferior conforme necessário */
+  margin-left: 30%; /* Adapte o espaçamento inferior conforme necessário */
+  margin-right: 30%; /* Adapte o espaçamento inferior conforme necessário */
+   /* Adapte o espaçamento inferior conforme necessário */
+
+  display: flex; /* Permite que os itens dentro do grupo se alinhem horizontalmente */
+  flex-direction: column;
+  align-items: flex-start;
+}
+.checkbox-group label {
+  margin-left: 15px; /* Adapte o espaçamento direito conforme necessário */
+  margin-bottom: 15px; /* Adapte o espaçamento direito conforme necessário */
+  display: inline-block;
+ /* align-self: start;*/
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
