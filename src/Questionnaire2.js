@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Questionnaire2 = ({onProfessionSelect}) => {
     const MaxPages = 11
     const TipoP = {
